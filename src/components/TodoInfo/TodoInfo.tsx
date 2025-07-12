@@ -12,8 +12,11 @@ export const TodoInfo:React.FC<Prop> = ({ todo}) => (
   })}>
     <h2 className="TodoInfo__title">{todo.title}</h2>
 
-    <a className="UserInfo" href="mailto:Sincere@april.biz">
+    <a className="UserInfo" href={`mailto:${getUserById(todo.userId)?.email}`}>
       {getUserById(todo.userId)?.name}
     </a>
   </article>
 );
+
+
+"mailto:Sincere@april.biz"
